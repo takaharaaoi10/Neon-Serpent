@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Block Serpent</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell" aria-label="Neon Block Serpent game">
+      <section class="game-wrap">
+        <div class="hud">
+          <div class="brand">
+            <span>Neon Block Serpent</span>
+            <strong>Dodge. Break. Grow.</strong>
+          </div>
+          <div class="stats" aria-live="polite">
+            <div>
+              <span>Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span>Len</span>
+              <strong id="length">8</strong>
+            </div>
+            <div>
+              <span>Combo</span>
+              <strong id="combo">1.0x</strong>
+            </div>
+            <div>
+              <span>Best</span>
+              <strong id="best">0</strong>
+            </div>
+          </div>
+          <button class="icon-button" id="pauseBtn" type="button" aria-label="Pause">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14M16 5v14" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="canvas-frame">
+          <canvas id="game" width="540" height="768"></canvas>
+          <div class="overlay is-visible" id="overlay">
+            <div class="panel">
+              <span class="badge">Fast Run</span>
+              <h2 id="overlayTitle">Neon Block Serpent</h2>
+              <p id="overlayText">
+                Slide lanes, hit the smallest blocks, and stack powers before the walls close in.
+              </p>
+              <button class="primary" id="startBtn" type="button">Start Run</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls" aria-label="Touch controls">
+          <button class="move" id="leftBtn" type="button" aria-label="Move left">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 18 9 12l6-6" />
+            </svg>
+          </button>
+          <button class="move" id="rightBtn" type="button" aria-label="Move right">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <div class="legend">
+        <div><span class="dot spark"></span>Spark</div>
+        <div><span class="dot shield"></span>Shield</div>
+        <div><span class="dot magnet"></span>Magnet</div>
+        <div><span class="dot gate"></span>Gate</div>
+      </div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
